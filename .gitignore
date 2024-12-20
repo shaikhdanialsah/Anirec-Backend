@@ -1,0 +1,29 @@
+# Ignore environment variable files
+.env
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment directory
+venv/
+env/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore database files
+*.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore app_2.py
+app_2.py
+
+# Ignore json file
+anime_data.json
+
+#Ignore random_jwt.py
+random_jwt.py
