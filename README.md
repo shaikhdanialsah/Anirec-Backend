@@ -1,5 +1,11 @@
 # AniRec+ (Backend)
 
+<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />&nbsp;
+<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />&nbsp;
+<img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit learn&logoColor=white" />&nbsp;
+<img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white" />&nbsp;
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" />
+
 ## Overview
 
 This is the backend for an anime recommendation system built using **Flask** and connected to a **PostgreSQL** database (Supabase) and  hosted on **Koyeb**. The system includes an API that allows users to query anime recommendations based on their input (e.g., anime title), along with additional functionalities like user authentication (sign-up/login).
@@ -50,6 +56,12 @@ DATABASE_PASSWORD='YOUR_DATABASE_PASSWORD'
 DATABASE_HOST='YOUR_DATABASE_HOSTNAME'
 JWT_SECURE_KEY='YOUR_JWT_SECURE_KEY'
 ```
+It is best for the JWT secure key to be long `(up to 32 characters)` and completely random. Here's how to generate a random JWT secure key with python
+
+```python
+import secrets
+print(secrets.token_hex(32)) 
+```
 
 ### 5. Run the Flask app
 ```bash
@@ -57,7 +69,7 @@ python app.py
 ```
 The backend will be running on `http://localhost:5000`.
 
-## API Endpoints
+## API Endpoints (Example)
 
 ### 1. `/api/recommend?anime=anime_name` (POST)
 
@@ -78,6 +90,10 @@ To deploy the backend to Koyeb, follow these steps:
 1. Set up the app on Koyeb and connect to your `PostgreSQL database`.
 2. Push the app to Koyeb using Git or other deployment methods.
 3. Make sure the environment variables (like `DATABASE_NAME, DATABASE_HOST, DATABASE_PASSWORD, DATABASE_USER`) are properly configured.
+4. Add a Procfile file so Koyeb knows how to start your application.
+```bash
+gunicorn module_name:application_instance_name
+``` 
 
 ## License
 This project is licensed under the MIT License - see the [MIT](https://choosealicense.com/licenses/mit/) file for details.
