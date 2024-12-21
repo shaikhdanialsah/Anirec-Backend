@@ -1,4 +1,5 @@
 # AniRec+ (Backend)
+Here is the link to front-end repository: [Anirec-Frontend](https://github.com/shaikhdanialsah/Anirec-Frontend)
 
 <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />&nbsp;
 <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />&nbsp;
